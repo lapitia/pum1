@@ -2,8 +2,8 @@ fun check(n: Int, list: List<Int>): Int {
     if (n <= 0 || list.size <= n) return -1
 
     for (i in n until list.size) {
-        val target = list[i]
-        val preamble = list.subList(i - n, i)
+        val target = list[i] //sprawdzana liczba
+        val preamble = list.subList(i - n, i) //n elementów przed target (od indeksu początkowego włącznie do końcowego wyłącznie)
 
         var ok = false
 
@@ -24,14 +24,11 @@ fun check(n: Int, list: List<Int>): Int {
 }
 
 fun main() {
-    println(check(2, listOf(1, 2, 3, 4, 5, 6))) 
-    // 4
-
+    println(check(2, listOf(1, 2, 3, 4, 5, 6))) // 4
     println(
         check(
             5,
             listOf(35, 25, 15, 25, 47, 40, 62, 55, 65, 95, 102, 117, 150, 182, 127, 219, 299, 277, 309, 576)
         )
-    )
-    // 127
+    ) // 127
 }
