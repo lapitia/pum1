@@ -10,4 +10,5 @@ fun main() {
 	println(isSorted(listOf(1,2,3)){i: Int, j: Int -> i<j})
     println(isSorted(listOf(2,2,2)){i: Int, j: Int -> i==j})
     println(isSorted(listOf(1,2,1)){i: Int, j: Int -> i>j})
+println(isSorted(listOf("ahyyhh", "bkjn", "cnn", "duu"), {i: String, j: String -> i.first() < j.first()}))
 }
